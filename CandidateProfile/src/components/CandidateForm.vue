@@ -4,7 +4,19 @@
     <form @submit.prevent="saveChanges" class="edit-form-view">
       <div class="form-grid">
         <div class="form-field">
-          <label for="currentOrganization">Current Organization</label>
+          <label for="Name" class="required-label">Name</label>
+          <input type="text" id="Name" v-model="form.name" />
+        </div>
+        <div class="form-field">
+          <label for="phoneNumber" class="required-label">Phone Number</label>
+          <input type="text" id="phoneNumber" v-model="form.phone" />
+        </div>
+        <div class="form-field">
+          <label for="emailId" class="required-label">Email Id</label>
+          <input type="text" id="email" v-model="form.email" />
+        </div>
+        <div class="form-field">
+          <label for="currentOrganization" class="required-label">Current Organization</label>
           <input type="text" id="currentOrganization" v-model="form.currentOrganization" />
         </div>
         <div class="form-field">
@@ -12,11 +24,15 @@
           <input type="text" id="summary" v-model="form.summary" />
         </div>
         <div class="form-field">
+          <label for="currentRole" class="required-label">Current Role</label>
+          <input type="text" id="currentRole" v-model="form.currentRole" />
+        </div>
+        <div class="form-field">
           <label for="currentEmploymentStatus">Current Employment Status</label>
           <input type="text" id="currentEmploymentStatus" v-model="form.currentEmploymentStatus" />
         </div>
         <div class="form-field">
-          <label for="skills">Skills</label>
+          <label for="skills" class="required-label">Skills</label>
           <input type="text" id="skills" v-model="form.skills" />
         </div>
         <div class="form-field">
@@ -24,15 +40,19 @@
           <input type="text" id="dateOfBirth" v-model="form.dateOfBirth" />
         </div>
         <div class="form-field">
-          <label for="relevantExperience">Relevant Experience</label>
+          <label for="relevantExperience" class="required-label">Relevant Experience</label>
           <input type="text" id="relevantExperience" v-model="form.relevantExperience" />
+        </div>
+        <div class="form-field">
+          <label for="totalExperience" class="required-label">Total Experience</label>
+          <input type="text" id="totalExperience" v-model="form.totalExperience" />
         </div>
         <div class="form-field">
           <label for="availableFrom">Available From</label>
           <input type="text" id="availableFrom" v-model="form.availableFrom" />
         </div>
         <div class="form-field">
-          <label for="salaryExpectation">Salary Expectation</label>
+          <label for="salaryExpectation" class="required-label">Salary Expectation</label>
           <input type="text" id="salaryExpectation" v-model="form.salaryExpectation" />
         </div>
         <div class="form-field">
@@ -40,7 +60,7 @@
           <input type="text" id="status" v-model="form.status" />
         </div>
         <div class="form-field">
-          <label for="currentSalary">Current Salary</label>
+          <label for="currentSalary" class="required-label">Current Salary</label>
           <input type="text" id="currentSalary" v-model="form.currentSalary" />
         </div>
         <div class="form-field">
@@ -52,7 +72,7 @@
           <input type="text" id="languageSkills" v-model="form.languageSkills" />
         </div>
         <div class="form-field full-width">
-          <label for="noticePeriod">Notice Period</label>
+          <label for="noticePeriod" class="required-label">Notice Period</label>
           <input type="text" id="noticePeriod" v-model="form.noticePeriod" />
         </div>
         <div class="form-field full-width">
@@ -90,6 +110,7 @@ const form = ref<CandidateForm>({
   resume: '',
   totalExperience: '',
   summary: '',
+  currentRole: '',
   currentEmploymentStatus: '',
   dateOfBirth: '',
   relevantExperience: '',
@@ -101,13 +122,16 @@ const form = ref<CandidateForm>({
 
 const validateForm = (): boolean => {
   const requiredFields = [
+    'name',
+    'phone',
+    'email',
     'currentOrganization',
-    'currentEmploymentStatus',
     'skills',
     'relevantExperience',
+    'totalExperience',
     'salaryExpectation',
     'currentSalary',
-    'salaryType',
+    'currentRole',
     'noticePeriod',
   ]
 
@@ -143,6 +167,7 @@ const cancelEdit = () => {
     resume: '',
     totalExperience: '',
     summary: '',
+    currentRole: '',
     currentEmploymentStatus: '',
     dateOfBirth: '',
     relevantExperience: '',

@@ -12,6 +12,7 @@ export interface CandidateForm {
   resume: string;
   totalExperience: string;
   summary: string;
+  currentRole: string
   currentEmploymentStatus: string;
   dateOfBirth: string;
   relevantExperience: string;

@@ -1,0 +1,73 @@
+
+$toolbar-bg-color: #f7fafc;
+$border-color: #e2e8f0;
+$primary-color: #2b6cb0;
+$secondary-color: #4a5568;
+$text-color: #2d3748;
+
+.details-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  height: 50px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.left-section {
+  .name-id-container {
+    display: flex;
+    align-items: baseline;
+
+    .title-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: $primary-color;
+      margin-right: 10px;
+    }
+
+    .candidate-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: $text-color;
+      margin-right: 10px;
+    }
+
+    .candidate-id {
+      font-size: 14px;
+      color: $secondary-color;
+    }
+  }
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+
+    .btn {
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+
+      &-color {
+        background-color: white;
+        color: $secondary-color;
+        border-color: $border-color;
+
+        &:hover {
+          background-color: $border-color;
+        }
+      }
+    }
+  }
+}

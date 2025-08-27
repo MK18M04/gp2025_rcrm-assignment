@@ -1,0 +1,58 @@
+$background-color: #143e6f;
+$icon-color-default: #8191a7;
+$icon-color-active: white;
+$active-bg-color: #2b6cb0;
+
+.left-container {
+  width: 56px;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .icon-group {
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    padding: 12px;
+    margin: 8px;
+    gap: 10px;
+
+    .bx {
+      color: white;
+    }
+  }
+
+  .custom-separator {
+    height: 2px; 
+    width: 70%; 
+    background-color:$active-bg-color ; 
+    margin: 10px auto; 
+  }
+
+  .icon {
+    color: $icon-color-active;
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $icon-color-active;
+    }
+  }
+
+  .icon-active {
+    background-color: $active-bg-color;
+    color: $icon-color-active;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,179 @@
+$card-border: #e2e8f0;
+$text-color: #2d3748;
+$label-color: #718096;
+$primary-color: #2b6cb0;
+
+.candidate-card {
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $card-border;
+  padding: 15px;
+}
+
+.candidate-info {
+  display: flex;
+  align-items: center;
+
+  .avatar-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #31a171;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+
+  .name-section {
+    display: flex;
+    flex-direction: column;
+
+    .name-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+
+      .candidate-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: $text-color;
+        margin-right: 10px;
+      }
+      .media-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+      }
+    }
+
+    .details-row {
+      font-size: 14px;
+      color: $label-color;
+
+      span {
+        margin-right: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+.cadidate-action {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+  align-items: center;
+  gap: 10px;
+
+  .icons-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+}
+
+.contact-linked {
+  border: 1px solid #f6c1c1;
+  background-color: #f6c1c1;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 20px solid;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: $text-color;
+
+  i {
+    color: $primary-color;
+    margin-right: 8px;
+    font-size: large;
+  }
+}
+
+.contact-info {
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid $card-border;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .contact-info-left,
+  .contact-info-right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .contact-info-left {
+    margin-right: 20px;
+  }
+
+  .title-name {
+    color: $primary-color;
+  }
+}
+
+.candidate-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+  padding-right: 80px;
+  margin-right: 30px;
+  gap: 20px 30px;
+
+  .detail-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .label {
+      font-size: 12px;
+      color: $label-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .value {
+      font-size: 14px;
+      color: $text-color;
+      font-weight: 500;
+    }
+  }
+}

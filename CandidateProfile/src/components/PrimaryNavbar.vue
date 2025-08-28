@@ -42,8 +42,6 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
 <style lang="scss">
 @import '../styles/primary-navbar.scss';
 </style>

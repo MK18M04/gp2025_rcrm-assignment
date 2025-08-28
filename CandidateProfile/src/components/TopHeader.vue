@@ -41,8 +41,6 @@
   </header>
 </template>
 
-<script lang="ts"></script>
-
 <style lang="scss">
 @import '../styles/top-header.scss';
 </style>
